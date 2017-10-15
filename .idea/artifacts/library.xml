@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="library">
+    <output-path>$PROJECT_DIR$/out/artifacts/library</output-path>
+    <root id="archive" name="library.war">
+      <element id="artifact" artifact-name="struts2test5:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-fileupload-1.3.3" />
+        </element>
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/web" />
+    </root>
+  </artifact>
+</component>

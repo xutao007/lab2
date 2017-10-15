@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="struts2test5:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/struts2test5_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="struts2test5/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="struts2test5" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.44-bin" />
+          <element id="library" level="project" name="commons-beanutils-1.9.2" />
+          <element id="library" level="project" name="struts2-json-plugin-2.5.13" />
+          <element id="library" level="project" name="commons-collections-3.2.2" />
+          <element id="library" level="project" name="commons-io-2.5" />
+          <element id="library" level="project" name="commons-logging-1.1.3" />
+          <element id="library" level="project" name="commons-fileupload-1.3.3" />
+        </element>
+      </element>
+      <element id="module-output" name="struts2test5" />
+    </root>
+  </artifact>
+</component>

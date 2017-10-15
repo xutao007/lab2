@@ -1,0 +1,18 @@
+CREATE DATABASE BookDB;
+CREATE TABLE Author
+(
+  AuthorID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  Name VARCHAR(128),
+  Age int,
+  Country VARCHAR(128)
+);
+CREATE TABLE Book
+(
+  ISBN VARCHAR(128) NOT NULL PRIMARY KEY,
+  Title VARCHAR(255),
+  AuthorID int,
+  Publisher VARCHAR(255),
+  PublishDate DATE,
+  Price FLOAT,
+  FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID)
+);

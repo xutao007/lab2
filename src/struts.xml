@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default, json-default">
+        <!--首页请求，name对应index.jsp中的action名字-->
+        <!--<action name="product-input">-->
+            <!--&lt;!&ndash;转到input.jsp页面&ndash;&gt;-->
+            <!--<result>input.jsp</result>-->
+        <!--</action>-->
+        <!--第二个action请求，name对应input.jsp下的action名字
+        引用对象以及其方法-->
+
+        <action name="queryByAuthor" class="queryAuthor" method="query">
+            <result name="success">/booklist.jsp</result>
+            <!--<result name="fail">/index.jsp</result>-->
+        </action>
+
+
+        <action name="executeAjaxAction" class="queryAuthor" method="executeAjax">
+            <result type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+
+        <action name="saveNewBook" class="changeBookMsg" method="saveBook">
+            <result type="json">
+                <param name="root">saveFlag</param>
+            </result>
+        </action>
+
+
+        <action name="saveNewAuthor" class="changeAuthorMsg" method="saveAuthor">
+            <result type="json">
+                <param name="root">saveFlag</param>
+            </result>
+        </action>
+
+        <action name="isAuthorExist" class="queryAuthor" method="isAuthorExist">
+            <result type="json">
+                <param name="root">isExist</param>
+            </result>
+        </action>
+
+        <action name="setBookMsg" class="queryTitle" method="executeBookAjax">
+            <result type="json">
+                <param name="root">bookresult</param>
+            </result>
+        </action>
+
+        <action name="setAuthorMsg" class="queryTitle" method="executeAuthorAjax">
+            <result type="json">
+                <param name="root">authorresult</param>
+            </result>
+        </action>
+
+        <action name="delbook" class="queryTitle" method="executeDel">
+            <!--<result name="success"> </result>-->
+        </action>
+
+        <action name="updateBook" class="changeBookMsg" method="updateBook">
+            <result type="json">
+                <param name="root">updateFlag</param>
+            </result>
+        </action>
+
+        <action name="isTitleExist" class="queryTitle" method="isTitleExist">
+            <result type="json">
+                <param name="root">isExist</param>
+            </result>
+        </action>
+
+        <action name="isIDExist" class="queryAuthor" method="isIDExist">
+            <result type="json">
+                <param name="root">isExist</param>
+            </result>
+        </action>
+    </package>
+
+</struts>
