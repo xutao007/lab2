@@ -242,7 +242,7 @@
 <script src="jquery-3.1.1.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script>
-
+    // git change
     //提交查询作者
     $("#query-btn").on("click", function(){
 //        if($("#queryByAuthor input").text() != ""){
